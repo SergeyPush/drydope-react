@@ -1,18 +1,19 @@
 import CardBig from "./CardBig";
 import styled from 'styled-components'
 import data from '../data'
+import { HiArrowRight } from "react-icons/hi";
+
 
 const BestSellers = () => {
     return (
         <WrapperStyled>
             <TitleWrapperStyled>
-                <TitleStyled>Bestsellers-></TitleStyled>
+                <TitleStyled>Bestsellers <HiArrowRight className="arrow"/></TitleStyled>
             </TitleWrapperStyled>
             <div className="card-list">
                 {
                     data.map((item, index)=><CardBig data={item} key={index}/>)
                 }
-
             </div>
         </WrapperStyled>
     );
@@ -36,6 +37,7 @@ const TitleWrapperStyled = styled.div`
   width: 177px;
   font-family: "Gosha Sans", sans-serif;
   font-size: 39px;
+  text-transform: uppercase;
 `
 const TitleStyled = styled.p`
   top: 0;
@@ -44,6 +46,10 @@ const TitleStyled = styled.p`
   transform-origin: 0 0;
   transform: rotate(90deg);
   width: 300px;
+  .arrow{
+    width: 20px;
+    height: 20px;
+  }
 `
 
 export default BestSellers;

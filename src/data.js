@@ -1,4 +1,5 @@
-export default [
+
+const data = [
     {
         name:"Dairy raincoat Warning",
         price:"800",
@@ -36,3 +37,4 @@ export default [
         imageTwo:""
     }
 ]
+export default data
